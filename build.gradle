@@ -68,8 +68,10 @@ dependencies {
 
 	modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
 
-	modImplementation "com.github.DaFuqs:AdditionalEntityAttributes:${project.aea_version}"
-	include "com.github.DaFuqs:AdditionalEntityAttributes:${project.aea_version}"
+	modImplementation "com.github.MerchantPug:AdditionalEntityAttributes:${project.aea_version}"
+	include "com.github.MerchantPug:AdditionalEntityAttributes:${project.aea_version}"
+	// modImplementation "com.github.DaFuqs:AdditionalEntityAttributes:${project.aea_version}"
+	// include "com.github.DaFuqs:AdditionalEntityAttributes:${project.aea_version}"
 	// modImplementation "de.dafuqs:AdditionalEntityAttributes:${project.aea_version}"
 	// include "de.dafuqs:AdditionalEntityAttributes:${project.aea_version}"
 }
