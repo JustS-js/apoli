@@ -55,10 +55,7 @@ public class EntityActions {
         register(NothingAction.getFactory());
         register(SideAction.getFactory(ApoliDataTypes.ENTITY_ACTION, entity -> !entity.world.isClient));
 
-        register(new ActionFactory<>(Apoli.identifier("damage"), new SerializableData()
-            .add("amount", SerializableDataTypes.FLOAT)
-            .add("source", SerializableDataTypes.DAMAGE_SOURCE),
-            (data, entity) -> entity.damage(data.get("source"), data.getFloat("amount"))));
+        register(DamageAction.getFactory());
         register(new ActionFactory<>(Apoli.identifier("heal"), new SerializableData()
             .add("amount", SerializableDataTypes.FLOAT),
             (data, entity) -> {
