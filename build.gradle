@@ -11,9 +11,20 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
+		filter {
+			includeGroup "maven.modrinth"
+		}
+	}
 	maven {
 		name = "Ladysnake Libs"
-		url = 'https://ladysnake.jfrog.io/artifactory/mods'
+		url = 'https://maven.ladysnake.org/releases'
 	}
 	maven {
 		name = "JitPack"
@@ -68,8 +79,8 @@ dependencies {
 
 	modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
 
-	modImplementation "com.github.DaFuqs:AdditionalEntityAttributes:${project.aea_version}"
-	include "com.github.DaFuqs:AdditionalEntityAttributes:${project.aea_version}"
+	modImplementation "maven.modrinth:additionalentityattributes:${project.aea_version}"
+	include "maven.modrinth:additionalentityattributes:${project.aea_version}"
 	// modImplementation "de.dafuqs:AdditionalEntityAttributes:${project.aea_version}"
 	// include "de.dafuqs:AdditionalEntityAttributes:${project.aea_version}"
 }
